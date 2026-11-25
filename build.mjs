@@ -30,7 +30,7 @@ const shell = `<!doctype html>
 <meta property="og:title" content="${TITLE}">
 <meta property="og:description" content="${DESC}">
 <meta property="og:url" content="${PAGE_URL}">
-<meta property="og:image" content="${URL_}img/og.png">
+<meta property="og:image" content="${URL_}img/${process.env.OGIMG || "og.png"}">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
