@@ -2,7 +2,7 @@
 // 使い方: node build.mjs   （鍵は .key。URL末尾 #k=鍵 で自動表示）
 import { readFileSync, writeFileSync } from 'node:fs';
 import { webcrypto as crypto } from 'node:crypto';
-const PW = readFileSync(new URL('.key', import.meta.url), 'utf8').trim();
+const PW = readFileSync(new URL(process.env.KEYFILE || '.key', import.meta.url), 'utf8').trim();
 // 別ページは環境変数で: SRC=… OUT=radio/index.html TITLE=… DESC=… P=../ node build.mjs
 const SRC = process.env.SRC;
 const OUT = process.env.OUT || 'index.html';
